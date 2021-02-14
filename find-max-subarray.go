@@ -13,6 +13,10 @@ type MaxSubarray struct {
 
 // FindMaxSubarray find max subarray in A[0..len(A)-1]
 func FindMaxSubarray(A []int, low, high int) (ans MaxSubarray) {
+	if len(A) < 200 {
+		return FindMaxSubarray2(A)
+	}
+
 	if low == high {
 		return MaxSubarray{low, high, A[low]}
 	}
@@ -62,7 +66,7 @@ func findMaxCrossingSubarray(A []int, low, mid, high int) (ans MaxSubarray) {
 	return
 }
 
-// FindMaxSubarray2 answer for 4.1-1
+// FindMaxSubarray2 answer for 4.1-2
 func FindMaxSubarray2(A []int) (ans MaxSubarray) {
 	for left := range A {
 		var sum int
