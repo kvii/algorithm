@@ -26,11 +26,11 @@ func Test413(t *testing.T) {
 
 		t1 := time.Now()
 		info1 := FindMaxSubarray(A, 0, len(A)-1)
-		d1 := time.Since(t1).Nanoseconds()
+		d1 := time.Since(t1)
 
 		t2 := time.Now()
 		info2 := FindMaxSubarray2(A)
-		d2 := time.Since(t2).Nanoseconds()
+		d2 := time.Since(t2)
 
 		if info1 != info2 {
 			t.Error("err")

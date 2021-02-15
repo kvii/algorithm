@@ -13,10 +13,6 @@ type MaxSubarray struct {
 
 // FindMaxSubarray find max subarray in A[0..len(A)-1]
 func FindMaxSubarray(A []int, low, high int) (ans MaxSubarray) {
-	if len(A) < 200 {
-		return FindMaxSubarray2(A)
-	}
-
 	if low == high {
 		return MaxSubarray{low, high, A[low]}
 	}
