@@ -2,7 +2,7 @@ package main
 
 // SquareMatrixMultiply 矩阵乘法
 /*
-	QUARE_MATRIX_MULTIPLY(A, B) // n = A.rows
+	SQUARE_MATRIX_MULTIPLY(A, B) // n = A.rows
 		C = make_matrix(n, n)
 		for i := 1 to n
 			for j := 1 to n
